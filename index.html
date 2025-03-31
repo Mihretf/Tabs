@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabs with Javascript</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab active" data-tab="1">HTML Notes</div>
+        <!-- this is the tab we will get firsthand being clicked on that is why it has the keyword active and the others dont have it because the js will then remove the activate keyword from this tab and put in on wherever the user has clicked. -->
+        <div class="tab" data-tab="2">CSS Notes</div>
+        <div class="tab" data-tab="3">JavaScript Notes</div>
+        <div class="tab" data-tab="4">Best Practices</div>
+<!-- 
+        Using the "data-tab" attribute allows us to easily map each tab to its corresponding content.
+    The value of "data-tab" (e.g., "1", "2", etc.) helps identify which tab is selected and which content should be displayed. -->
+
+    </div>
+    <div class="tab-content active" id="tab-1"> 
+        <h2>HTML Basics</h2>
+        <p>HTML stands for HyperText Markup Language. It is used to structure content on the web.</p>
+    </div>
+    <div class="tab-content" id="tab-2">
+        <h2>CSS Styling</h2>
+        <p>CSS (Cascading Style Sheets) is used to design and style HTML elements.</p>
+    </div>
+    <div class="tab-content" id="tab-3" >
+        <h2>JavaScript Functions</h2>
+        <p>JavaScript is a programming language used to make web pages interactive.</p>
+    </div>
+    <div class="tab-content" id="tab-4" >
+        <h2>Best Practices</h2>
+        <p>Always write clean and maintainable code. Follow coding conventions and keep your files organized.</p>
+    </div>
+
+    <script src="JS/script.js"></script> 
+    <!-- we call our js at the bottom to ensure that the html content is loaded before the script runs. It prevents issues where Js tries to access elements that haven't been loaded yet. *-->
+
+</body>
+</html>

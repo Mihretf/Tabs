@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.tabs {
+    display: flex; 
+    /* lay out the items/tabs side by side */
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.tab {
+    padding: 15px 20px;
+
+    cursor: pointer;
+    /* when I hover on the tabs my mouse pointer changes to a hand icon */
+    background-color: #ddd;
+    margin: 0 5px;
+    /* this gives the tabs a little space between them */
+    border-radius: 5px;
+    /* this gives the tabs a rounded corner effect */
+    transition: background 0.3s ease;
+    /* in around 3 seconds the background color sort of fades */
+}
+
+.tab.active {
+    background-color: #555;
+    /* when I click on the tabs the background color changes to a darker shade of gray */
+    color: white;
+    /* this is the text's color */
+}
+
+.tab:hover {
+    background-color: #bbb;
+    /* when I hover on the tabs the background color changes to a lighter shade of gray */
+}
+
+.tab-content {
+    display: none;
+    /* no bulletins or anything, just a blank space */
+    padding: 20px;
+    background-color: white;
+    margin: 20px auto;
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content.active {
+    display: block;
+    /* when I click on the tabs the content appears, then it will have a block propery */
+}
+
+#tab-1 {
+    background-color: #ffebcd;
+}
+
+#tab-2 {
+    background-color: #add8e6;
+}
+
+#tab-3 {
+    background-color: #98fb98;
+}
+
+#tab-4 {
+    background-color: #dda0dd;
+}

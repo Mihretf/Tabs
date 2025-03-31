@@ -1,0 +1,128 @@
+ document.addEventListener("DOMContentLoaded", function () {
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+            const target = this.getAttribute("data-tab");
+            
+            tabs.forEach(t => t.classList.remove("active"));
+            contents.forEach(c => c.classList.remove("active"));
+            
+            this.classList.add("active");
+            document.getElementById(`tab-${target}`).classList.add("active");
+        });
+    });
+});
+
+ 
+ document.addEventListener("DOMContentLoaded", function () {
+
+    // document → Refers to the entire HTML document (webpage).
+
+    // . (dot) → Used to access properties or methods of an object.
+    
+    // addEventListener → A method that listens for an event (e.g., a click, page load, keypress).
+    
+    // ( → Starts the function parameters.
+    
+    // "DOMContentLoaded" → This is the event name. It fires when the HTML is fully loaded, but before images or styles are loaded.
+    
+    // , (comma) → Separates the event name and the function definition.
+    
+    // function () { → Defines an anonymous function (a function without a name). It will run when the "DOMContentLoaded" event occurs.
+    
+    // { → Opens the function body, where we write the instructions.
+
+    const tabs = document.querySelectorAll(".tab");
+
+//     const → Declares a constant variable, meaning its value cannot be reassigned later.
+
+// tabs → The variable name that stores the list of tab elements.
+
+// = → Assigns a value to the tabs variable.
+
+// document.querySelectorAll(".tab") → Selects all elements that have the class "tab" in the HTML.
+
+// document → The webpage.
+
+// . → Accessing a method from document.
+
+// querySelectorAll() → A method that selects multiple elements matching the given selector (".tab" in this case).
+
+// (".tab") → Looks for all elements with the class "tab".
+
+const contents = document.querySelectorAll(".tab-content");
+
+// This works the same way as the previous querySelectorAll, but selects elements with the class "tab-content" (which contains the actual content for each tab).
+
+tabs.forEach(tab => {
+
+    // tabs → The list of tab elements we selected earlier.
+
+    // . → Accessing a method on tabs.
+    
+    // forEach → A looping method that goes through each tab in tabs.
+    
+    // (tab => { → Starts an arrow function.
+    
+    // tab → A variable representing the current tab in the loop.
+    
+    // => { → This is the arrow function syntax, meaning "for each tab, do this code inside {}".
+
+    tab.addEventListener("click", function () {
+
+//         tab → The current tab in the loop.
+
+// . → Accessing a method on tab.
+
+// addEventListener("click", function () { → Adds a click event listener to the tab. When the user clicks a tab, this function will run.
+
+const target = this.getAttribute("data-tab");
+
+// const → Declares a constant variable.
+
+// target → The variable name that stores the tab’s target ID.
+
+// = → Assigns a value to target.
+
+// this → Refers to the tab that was clicked.
+
+// . → Accessing a method on this.
+
+// getAttribute("data-tab") → Retrieves the value of the data-tab attribute from the clicked tab.
+
+// "data-tab" → The name of the custom attribute in HTML (like <div class="tab" data-tab="1">).
+
+tabs.forEach(t => t.classList.remove("active"));
+// tabs.forEach(...) → Loops through all tabs.
+
+// t → The current tab inside the loop.
+
+// t.classList.remove("active") → Removes the "active" class from each tab, making sure only the clicked tab gets activated later.
+
+contents.forEach(c => c.classList.remove("active"));
+// contents.forEach(...) → Loops through all content sections.
+
+// c → The current content section inside the loop.
+
+// c.classList.remove("active") → Hides all content sections by removing the "active" class.
+
+this.classList.add("active");
+// this → Refers to the tab that was clicked.
+
+// . → Accessing a property on this.
+
+// classList.add("active") → Adds the "active" class to the clicked tab, highlighting it.
+
+document.getElementById(`tab-${target}`).classList.add("active");
+// document.getElementById(...) → Selects an element by its ID.
+
+// `tab-${target}` → Template literal syntax that dynamically creates the ID.
+
+// If target = "1", this will select document.getElementById("tab-1").
+
+// .classList.add("active") → Adds the "active" class to the corresponding content section, making it visible.
+
+    
+// }); → Closes the function body and the event listener.
